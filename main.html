@@ -1,0 +1,451 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Be My Valentine 💕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=DM+Sans:wght@400;500;700&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --pink: #FFB3D9;
+  --soft-pink: #FFE5F1;
+  --coral: #FF8FAB;
+  --beige: #FFF5E4;
+  --soft-red: #FF6B9D;
+  --cream: #FFFEF9;
+  --text: #5A4A4A;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(135deg, var(--beige), var(--soft-pink));
+  color: var(--text);
+  overflow-x: hidden;
+  animation: pageFade 1.2s ease-out;
+}
+
+body.night {
+  background: linear-gradient(135deg, #2B1C2E, #1F1423);
+  color: #FFE5F1;
+}
+
+@keyframes pageFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating hearts */
+.bg-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  font-size: 22px;
+  animation: floatUp 14s linear infinite;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Hero */
+.hero { text-align: center; padding: 80px 20px 60px; }
+
+.hero h1 {
+  font-family: 'Righteous', cursive;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  color: var(--soft-red);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce { 50% { transform: translateY(-10px); } }
+
+.hero p { font-size: 1.3rem; margin-top: 20px; }
+
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  min-height: 120px;
+}
+
+.btn {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.4rem;
+  padding: 18px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.yes {
+  background: linear-gradient(135deg, var(--soft-red), var(--coral));
+  color: white;
+  animation: pulse 1.8s infinite;
+  z-index: 2;
+}
+
+@keyframes pulse { 50% { transform: scale(1.05); } }
+
+.no { background: #e0e0e0; position: absolute; }
+
+/* Success */
+.success { display: none; text-align: center; padding: 80px 20px; }
+.success.show { display: block; animation: zoom 0.5s ease-out; }
+
+@keyframes zoom {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Letter */
+.letter {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.envelope {
+  width: 200px;
+  height: 140px;
+  margin: auto;
+  background: linear-gradient(135deg, var(--soft-pink), var(--pink));
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--coral), var(--soft-red));
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+}
+
+.envelope.open .flap { transform: rotateX(180deg); }
+
+.letter-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+.envelope.open + .letter-content {
+  max-height: 1000px;
+  animation: slideOut 0.6s ease-out;
+}
+
+@keyframes slideOut {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Carousel */
+.carousel-section { margin: 60px 0; text-align: center; }
+
+.carousel-title {
+  font-family: 'Righteous', cursive;
+  color: var(--soft-red);
+  margin-bottom: 30px;
+}
+
+.carousel { position: relative; overflow: hidden; border-radius: 20px; }
+
+.carousel-track { display: flex; transition: transform 0.5s ease; }
+
+.carousel-slide {
+  min-width: 100%;
+  background: white;
+  padding: 20px;
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Save section */
+.save-memory {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 50px 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+#saveBtn {
+  margin-top: 20px;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  background: var(--soft-red);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+footer { text-align: center; padding: 40px; opacity: 0.85; }
+
+#musicToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--soft-red);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-hearts" id="hearts"></div>
+
+<div class="container">
+
+<section class="hero">
+  <h1>Will You Be My Valentine? 💕</h1>
+  <p>I have something important to ask you…</p>
+
+  <div class="buttons" id="buttons">
+    <button class="btn yes" id="yesBtn" aria-label="Say Yes">YES 💖</button>
+    <button class="btn no" id="noBtn">No 😢</button>
+  </div>
+</section>
+
+<section class="success" id="success">
+  <h2>🎉 You said YES 🎉</h2>
+  <p>This already feels like the best Valentine’s Day ever.</p>
+</section>
+
+<section class="letter">
+  <div class="envelope" id="envelope"><div class="flap"></div></div>
+  <p style="margin-top:15px">📮 Click to open</p>
+
+  <div class="letter-content">
+    <p style="margin-top:30px; line-height:1.8; font-style:italic;">
+      Your love letter goes here 💌
+    </p>
+  </div>
+</section>
+
+<section class="carousel-section">
+  <h2 class="carousel-title">Our Memories 📸</h2>
+
+  <div class="carousel">
+    <button class="carousel-btn prev">❮</button>
+
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <img src="images/photo1.jpg" loading="lazy">
+        <p>Memory caption ❤️</p>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="images/photo2.jpg" loading="lazy">
+        <p>Another memory ✨</p>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="images/photo3.jpg" loading="lazy">
+        <p>This moment meant everything 💫</p>
+      </div>
+    </div>
+
+    <button class="carousel-btn next">❯</button>
+  </div>
+</section>
+
+<section class="save-memory">
+  <h2>Before you go… 💖</h2>
+  <p>This page will always be here, just like this moment.</p>
+
+  <button id="saveBtn">📸 Save This Memory</button>
+  <p id="saveMsg" style="display:none; margin-top:20px;">
+    Screenshot this page and keep it forever ❤️
+  </p>
+</section>
+
+</div>
+
+<footer>Made with love ❤️</footer>
+
+<button id="musicToggle">🎵 Music</button>
+
+<audio id="bgMusic" loop>
+  <source src="music/bg.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="sparkleSound">
+  <source src="sounds/sparkle.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const hearts = document.getElementById("hearts");
+const emojis = ["💕","💖","💗","💘","💝"];
+
+setInterval(() => {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+  h.style.left = Math.random()*100 + "%";
+  hearts.appendChild(h);
+  setTimeout(() => h.remove(), 16000);
+}, 2500);
+
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const buttons = document.getElementById("buttons");
+const success = document.getElementById("success");
+
+let attempts = 0;
+
+noBtn.addEventListener("mouseenter", () => {
+  attempts++;
+  const rect = buttons.getBoundingClientRect();
+
+  noBtn.style.left = Math.random() * (rect.width - 100) + "px";
+  noBtn.style.top = Math.random() * 80 + "px";
+
+  yesBtn.style.transform = `scale(${1 + attempts*0.15})`;
+  if (attempts > 6) noBtn.style.display = "none";
+});
+
+const bgMusic = document.getElementById("bgMusic");
+bgMusic.volume = 0.28;
+
+yesBtn.onclick = () => {
+  buttons.style.display = "none";
+  success.classList.add("show");
+  bgMusic.play().catch(()=>{});
+  document.body.classList.add("night");
+  success.scrollIntoView({ behavior: "smooth" });
+};
+
+const envelope = document.getElementById("envelope");
+let opened = false;
+
+envelope.onclick = () => {
+  envelope.classList.toggle("open");
+  if (!opened) {
+    document.getElementById("sparkleSound").play().catch(()=>{});
+    opened = true;
+  }
+};
+
+const toggle = document.getElementById("musicToggle");
+toggle.onclick = () => {
+  if (bgMusic.paused) {
+    bgMusic.play();
+    toggle.textContent = "🔇 Mute";
+  } else {
+    bgMusic.pause();
+    toggle.textContent = "🎵 Music";
+  }
+};
+
+const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".carousel-slide");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let index = 0;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.onclick = () => { index = (index + 1) % slides.length; updateCarousel(); };
+prevBtn.onclick = () => { index = (index - 1 + slides.length) % slides.length; updateCarousel(); };
+
+// Swipe support
+let startX = 0;
+
+track.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) nextBtn.click();
+  if (endX - startX > 50) prevBtn.click();
+});
+
+const saveBtn = document.getElementById("saveBtn");
+const saveMsg = document.getElementById("saveMsg");
+
+saveBtn.onclick = async () => {
+  saveMsg.style.display = "block";
+
+  if (navigator.vibrate) {
+    navigator.vibrate([50,30,50]);
+  }
+
+  if ('share' in navigator) {
+    try {
+      await navigator.share({
+        title: 'Our Memory ❤️',
+        text: 'Look what I made for you',
+        url: window.location.href
+      });
+    } catch {}
+  }
+};
+</script>
+
+</body>
+</html> -->

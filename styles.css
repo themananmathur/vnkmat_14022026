@@ -1,0 +1,155 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:'DM Sans',sans-serif;
+  background:linear-gradient(135deg,#FFF5E4,#FFE5F1);
+  color:#5A4A4A;
+}
+
+/* PASSWORD */
+
+#passwordGate {
+  position:fixed;
+  inset:0;
+  background:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.gate-box { text-align:center; }
+
+.gate-box input { padding:12px; margin-top:15px; }
+
+.gate-box button {
+  margin-top:15px;
+  padding:12px 30px;
+  background:#FF6B9D;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero { text-align:center; padding:80px 20px; }
+
+.buttons {
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  position:relative;
+}
+
+.btn {
+  padding:18px 50px;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  font-size:1.2rem;
+}
+
+.yes { background:#FF6B9D; color:white; }
+.no { background:#ddd; position:absolute; }
+
+/* SUCCESS */
+
+.success { display:none; text-align:center; padding:60px; }
+.success.show { display:block; }
+
+/* LETTER */
+
+.letter {
+  background:white;
+  padding:40px;
+  margin:40px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.envelope {
+  width:200px;
+  height:140px;
+  margin:auto;
+  background:#FFB3D9;
+  border-radius:10px;
+  cursor:pointer;
+  position:relative;
+}
+
+.flap {
+  position:absolute;
+  top:0;
+  width:100%;
+  height:50%;
+  background:#FF6B9D;
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  transition:0.5s;
+}
+
+.envelope.open .flap { transform:rotateX(180deg); }
+
+.letter-content {
+  max-height:0;
+  overflow:hidden;
+  transition:0.5s;
+}
+
+.envelope.open + .letter-content { max-height:500px; }
+
+/* CAROUSEL */
+
+.carousel { overflow:hidden; border-radius:20px; position:relative; }
+
+.carousel-track {
+  display:flex;
+  transition:0.5s;
+}
+
+.carousel-slide {
+  min-width:100%;
+  background:white;
+  padding:20px;
+}
+
+.carousel-btn {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.4);
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+
+.prev { left:10px; }
+.next { right:10px; }
+
+/* SAVE */
+
+.save-memory {
+  background:white;
+  padding:40px;
+  margin:40px;
+  border-radius:20px;
+  text-align:center;
+}
+
+#saveMsg { display:none; margin-top:15px; }
+
+/* MUSIC */
+
+#musicToggle {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:10px 20px;
+  background:#FF6B9D;
+  color:white;
+  border:none;
+  border-radius:40px;
+  cursor:pointer;
+}

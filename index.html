@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Valentine ❤️</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=DM+Sans:wght@400;500;700&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="passwordGate">
+  <div class="gate-box">
+    <h2 id="gateTitle"></h2>
+    <input type="password" id="passwordInput" placeholder="Secret..." />
+    <button onclick="checkPassword()">Enter</button>
+    <p id="errorMsg"></p>
+  </div>
+</div>
+
+<div class="bg-hearts" id="hearts"></div>
+
+<div class="container">
+
+<section class="hero">
+  <h1 id="heroTitle"></h1>
+  <p id="heroSubtitle"></p>
+
+  <div class="buttons" id="buttons">
+    <button class="btn yes" id="yesBtn">YES 💖</button>
+    <button class="btn no" id="noBtn">No 😢</button>
+  </div>
+</section>
+
+<section class="success" id="success">
+  <h2 id="successTitle"></h2>
+  <p id="successText"></p>
+</section>
+
+<section class="letter">
+  <div class="envelope" id="envelope"><div class="flap"></div></div>
+  <p style="margin-top:15px">📮 Click to open</p>
+
+  <div class="letter-content">
+    <p id="letterText"></p>
+  </div>
+</section>
+
+<section class="carousel-section">
+  <h2 class="carousel-title">Our Memories 📸</h2>
+
+  <div class="carousel">
+    <button class="carousel-btn prev">❮</button>
+    <div class="carousel-track" id="carouselTrack"></div>
+    <button class="carousel-btn next">❯</button>
+  </div>
+</section>
+
+<section class="save-memory">
+  <h2 id="saveTitle"></h2>
+  <p id="saveText"></p>
+
+  <button id="saveBtn">📸 Save This Memory</button>
+  <p id="saveMsg"></p>
+</section>
+
+</div>
+
+<footer id="footerText"></footer>
+
+<button id="musicToggle">🎵 Music</button>
+
+<audio id="bgMusic" loop>
+  <source id="musicSource" type="audio/mpeg">
+</audio>
+
+<audio id="sparkleSound">
+  <source id="sparkleSource" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
