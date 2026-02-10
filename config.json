@@ -1,0 +1,40 @@
+{
+    "password": {
+      "title": "Enter Our Secret ❤️",
+      "secret": "iloveyou",
+      "error": "Wrong secret 😢"
+    },
+  
+    "hero": {
+      "title": "Will You Be My Valentine? 💕",
+      "subtitle": "I have something important to ask you…"
+    },
+  
+    "success": {
+      "title": "🎉 You said YES 🎉",
+      "text": "This already feels like the best Valentine’s Day ever."
+    },
+  
+    "letter": {
+      "text": "Write your love letter here."
+    },
+  
+    "carousel": [
+      { "image": "images/photo1.jpg", "caption": "Memory ❤️" },
+      { "image": "images/photo2.jpg", "caption": "Another memory ✨" }
+    ],
+  
+    "save": {
+      "title": "Before you go… 💖",
+      "text": "This page will always be here.",
+      "message": "Screenshot this page and keep it forever ❤️"
+    },
+  
+    "footer": "Made with love ❤️",
+  
+    "music": {
+      "bg": "music/bg.mp3",
+      "sparkle": "sounds/sparkle.mp3"
+    }
+  }
+  
