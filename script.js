@@ -108,22 +108,22 @@ envelope.onclick = () => {
    CAROUSEL
 ======================= */
 const track = document.getElementById("carouselTrack");
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".carousel-btn.next");
+const prevBtn = document.querySelector(".carousel-btn.prev");
 let slideIndex = 0;
 
 function buildCarousel() {
+  if (!CONFIG || !CONFIG.carousel) return;
+
   track.innerHTML = "";
 
   CONFIG.carousel.forEach(item => {
     const slide = document.createElement("div");
     slide.className = "carousel-slide";
-
     slide.innerHTML = `
       <img src="./${item.image}" onerror="this.style.display='none'">
       <p>${item.caption}</p>
     `;
-
     track.appendChild(slide);
   });
 }
@@ -132,15 +132,18 @@ function updateCarousel() {
   track.style.transform = `translateX(-${slideIndex * 100}%)`;
 }
 
-nextBtn.onclick = () => {
-  slideIndex = (slideIndex + 1) % track.children.length;
-  updateCarousel();
-};
+if (nextBtn && prevBtn) {
+  nextBtn.onclick = () => {
+    slideIndex = (slideIndex + 1) % track.children.length;
+    updateCarousel();
+  };
 
-prevBtn.onclick = () => {
-  slideIndex = (slideIndex - 1 + track.children.length) % track.children.length;
-  updateCarousel();
-};
+  prevBtn.onclick = () => {
+    slideIndex =
+      (slideIndex - 1 + track.children.length) % track.children.length;
+    updateCarousel();
+  };
+}
 
 /* Swipe support */
 let startX = 0;
