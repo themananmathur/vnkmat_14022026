@@ -16,17 +16,18 @@
     },
   
     "letter": {
-      "text": "Write your love letter here."
+      "text": "Your love letter goes here 💌"
     },
   
     "carousel": [
       { "image": "images/photo1.jpg", "caption": "Memory ❤️" },
-      { "image": "images/photo2.jpg", "caption": "Another memory ✨" }
+      { "image": "images/photo2.jpg", "caption": "Another memory ✨" },
+      { "image": "images/photo3.jpg", "caption": "This moment meant everything 💫" }
     ],
   
     "save": {
       "title": "Before you go… 💖",
-      "text": "This page will always be here.",
+      "text": "This page will always be here, just like this moment.",
       "message": "Screenshot this page and keep it forever ❤️"
     },
   
