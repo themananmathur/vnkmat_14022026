@@ -1,6 +1,6 @@
 {
     "password": {
-      "title": "Enter passcode (Hint: anniversary{ddmmyyy})",
+      "title": "Enter passcode (Hint: anniversary{ddmmyyyy})",
       "secret": "05102022",
       "error": "Bruh"
     },
