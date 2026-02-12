@@ -36,6 +36,8 @@ function initPage() {
   musicSource.src = CONFIG.music.bg;
   sparkleSource.src = CONFIG.music.sparkle;
 
+  bgMusic.load();
+
   buildCarousel();
 }
 

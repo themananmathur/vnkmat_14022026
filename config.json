@@ -18,20 +18,20 @@
     "letter": {
       "text": "Manan's letter"
     },
-  
+
     "carousel": [
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_1750.jpeg", "caption": "our FIRST ever date" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_0499.jpeg", "caption": "our most SANSKARI picture" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_0630.jpeg", "caption": "our FIRST ever date" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_2414.jpeg", "caption": "our CUTEST picture" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_3136.jpeg", "caption": "your idiot" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_3596.jpeg", "caption": "our HOTTEST picture" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_3934.jpeg", "caption": "I LOVE YOU 3000" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_4401.jpeg", "caption": "jab we met" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_7697.jpeg", "caption": "my EVERYTHING" },
-      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_8165.jpeg", "caption": "IYKYK" }
-    ],
-  
+      { "image": "images/IMG_8165.jpeg", "caption": "IYKYK" },
+      { "image": "images/IMG_1750.jpeg", "caption": "our FIRST ever date" },
+      { "image": "images/IMG_2414.jpeg", "caption": "our CUTEST picture" },
+      { "image": "images/IMG_3596.jpeg", "caption": "our HOTTEST picture" },
+      { "image": "images/IMG_0499.jpeg", "caption": "our most SANSKARI picture" },
+      { "image": "images/IMG_4401.jpeg", "caption": "jab we met" },
+      { "image": "images/IMG_0630.jpeg", "caption": "always. forever. vnkmat" },
+      { "image": "images/IMG_3136.jpeg", "caption": "your idiot" },
+      { "image": "images/IMG_7697.jpeg", "caption": "my EVERYTHING" },
+      { "image": "images/IMG_3934.jpeg", "caption": "I LOVE YOU 3000" }
+      ],
+
     "save": {
       "title": "Before you go… 💖",
       "text": "This page will always be here, just like this moment.",
