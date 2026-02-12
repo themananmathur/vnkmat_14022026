@@ -68,18 +68,34 @@ setInterval(() => {
 /* =======================
    YES / NO LOGIC
 ======================= */
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const buttons = document.getElementById("buttons");
+const success = document.getElementById("success");
+const bgMusic = document.getElementById("bgMusic");
+
 let attempts = 0;
 
 noBtn.addEventListener("mouseenter", () => {
   attempts++;
 
   const rect = buttons.getBoundingClientRect();
-  noBtn.style.left = Math.random() * (rect.width - 100) + "px";
-  noBtn.style.top = Math.random() * 80 + "px";
 
-  yesBtn.style.transform = `scale(${1 + attempts * 0.15})`;
+  const maxX = rect.width - noBtn.offsetWidth;
+  const maxY = 80;
 
-  if (attempts > 6) noBtn.style.display = "none";
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
+
+  // Make YES grow each time
+  yesBtn.style.transform = `scale(${1 + attempts * 0.12})`;
+
+  if (attempts > 7) {
+    noBtn.style.display = "none";
+  }
 });
 
 yesBtn.onclick = () => {
@@ -87,11 +103,12 @@ yesBtn.onclick = () => {
   success.classList.add("show");
 
   bgMusic.volume = 0.28;
-  bgMusic.play().catch(()=>{});
+  bgMusic.play().catch(() => {});
 
   document.body.classList.add("night");
   success.scrollIntoView({ behavior: "smooth" });
 };
+
 
 /* =======================
    LETTER

@@ -101,6 +101,7 @@ body.night {
 .buttons {
   margin-top: 50px;
   display: flex;
+  gap: 20px;
   justify-content: center;
   position: relative;
   min-height: 120px;
@@ -125,7 +126,7 @@ body.night {
 
 @keyframes pulse { 50% { transform: scale(1.05); } }
 
-.no { background: #e0e0e0; position: absolute; }
+.no { background: #e0e0e0; position: absolute; left: 160px; top: 0; }
 
 /* SUCCESS */
 .success { display:none; text-align:center; padding:80px 20px; }
