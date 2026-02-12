@@ -41,8 +41,8 @@
     "footer": "Made with love ❤️",
   
     "music": {
-      "bg": "Users/mananmathur/Desktop/feb14_2026/music/Stephen_Sanchez_Em_Beihold_-_Heaven_when_I_held_you_again_Until_I_Found_You_(mp3.pm).mp3",
-      "sparkle": "Users/mananmathur/Desktop/feb14_2026/music/soundzee-magical-sparkle-rise-fx-356090.mp3"
-    }
+      "bg": "music/heaven.mp3",
+      "sparkle": "music/sparkle.mp3"
+   }
   }
   
