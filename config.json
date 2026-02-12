@@ -1,13 +1,13 @@
 {
     "password": {
-      "title": "Enter Our Secret ❤️",
-      "secret": "iloveyou",
-      "error": "Wrong secret 😢"
+      "title": "Enter passcode (Hint: anniversary{ddmmyyy})",
+      "secret": "05102022",
+      "error": "Bruh"
     },
   
     "hero": {
-      "title": "Will You Be My Valentine? 💕",
-      "subtitle": "I have something important to ask you…"
+      "title": "Will you be My Valentine? 💕",
+      "subtitle": "pls pls pls x3000"
     },
   
     "success": {
@@ -16,13 +16,20 @@
     },
   
     "letter": {
-      "text": "Your love letter goes here 💌"
+      "text": "Manan's letter"
     },
   
     "carousel": [
-      { "image": "images/photo1.jpg", "caption": "Memory ❤️" },
-      { "image": "images/photo2.jpg", "caption": "Another memory ✨" },
-      { "image": "images/photo3.jpg", "caption": "This moment meant everything 💫" }
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_1750.jpeg", "caption": "our FIRST ever date" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_0499.jpeg", "caption": "our most SANSKARI picture" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_0630.jpeg", "caption": "our FIRST ever date" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_2414.jpeg", "caption": "our CUTEST picture" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_3136.jpeg", "caption": "your idiot" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_3596.jpeg", "caption": "our HOTTEST picture" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_3934.jpeg", "caption": "I LOVE YOU 3000" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_4401.jpeg", "caption": "jab we met" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_7697.jpeg", "caption": "my EVERYTHING" },
+      { "image": "/Users/mananmathur/Desktop/feb14_2026/images/IMG_8165.jpeg", "caption": "IYKYK" }
     ],
   
     "save": {
@@ -34,8 +41,8 @@
     "footer": "Made with love ❤️",
   
     "music": {
-      "bg": "music/bg.mp3",
-      "sparkle": "sounds/sparkle.mp3"
+      "bg": "Users/mananmathur/Desktop/feb14_2026/music/Stephen_Sanchez_Em_Beihold_-_Heaven_when_I_held_you_again_Until_I_Found_You_(mp3.pm).mp3",
+      "sparkle": "Users/mananmathur/Desktop/feb14_2026/music/soundzee-magical-sparkle-rise-fx-356090.mp3"
     }
   }
   
