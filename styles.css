@@ -19,7 +19,13 @@ body {
 
 body.night {
   background: linear-gradient(135deg, #2B1C2E, #1F1423);
-  color: #FFE5F1;
+}
+
+/* Keep white sections readable */
+body.night .letter,
+body.night .carousel-slide,
+body.night .save-memory {
+  color: #5A4A4A;
 }
 
 @keyframes pageFade { from {opacity:0;} to {opacity:1;} }

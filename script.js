@@ -178,13 +178,26 @@ track.addEventListener("touchend", e => {
 /* =======================
    MUSIC TOGGLE
 ======================= */
-musicToggle.onclick = () => {
-  if (bgMusic.paused) {
-    bgMusic.play();
+let isPlaying = false;
+
+yesBtn.addEventListener("click", () => {
+  bgMusic.volume = 0.28;
+  bgMusic.play().then(() => {
+    isPlaying = true;
     musicToggle.textContent = "🔇 Mute";
-  } else {
+  }).catch(() => {});
+});
+
+musicToggle.onclick = () => {
+  if (isPlaying) {
     bgMusic.pause();
     musicToggle.textContent = "🎵 Music";
+    isPlaying = false;
+  } else {
+    bgMusic.play().then(() => {
+      musicToggle.textContent = "🔇 Mute";
+      isPlaying = true;
+    }).catch(() => {});
   }
 };
 
